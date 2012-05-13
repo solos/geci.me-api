@@ -17,11 +17,17 @@ Get lyric by song
 ~~~~~~~~~~~~~~~~~~~~~
 
 + Resource url
+
   ``http://geci.me/api/lyric/:song``
+
 + Format
+
     JSON
+
 + Method
+
     GET
+
 + Example
 
 ::
@@ -74,11 +80,17 @@ Get lyric by song and artist
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 + Resource url
+
   ``http://geci.me/api/lyric/:song/:artist``
+
 + Format
+
     JSON
+
 + Method
+
     GET
+
 + Example
     
 ::
