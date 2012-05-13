@@ -62,6 +62,14 @@ Get lyric by song
     ] 
 
 
++ lrc url
+
+    http://s.geci.me/{sid/10000}/{sid/100}/sid.lrc
+
+    http://s.geci.me/16685/16685/1668536.lrc
+
+
+
 Get lyric by song and artist
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -96,6 +104,11 @@ Get lyric by song and artist
         {"song": "\u6d77\u9614\u5929\u7a7a", "artist": "Beyond", "sid": 3861244, "aid": 3161846}
     ]
 
++ lrc url
+
+    http://s.geci.me/{sid/10000}/{sid/100}/sid.lrc
+
+    http://s.geci.me/16685/16685/1668536.lrc
 
 Indices and tables
 ==================
