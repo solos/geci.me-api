@@ -3,8 +3,8 @@
 
 - 在github上阅读
     
-    https://github.com/solos/geci.me/blob/master/index.rst
+    https://github.com/solos/geci.me-api/blob/master/index.rst
 
 - 在Readthedocs上阅读 
 
-    http://readthedocs.org/docs/api/en/latest/
+    http://api.geci.me or http://readthedocs.org/docs/api/en/latest/
