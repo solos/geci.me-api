@@ -81,6 +81,7 @@ ________
     curl 'http://geci.me/api/lyric/海阔天空/Beyond' 
 
 ::
+
     {
         "count": 16, 
         "code": 0, 
@@ -165,13 +166,14 @@ ________
 ::
 
     {
-        "count": 1, 
-        "code": 0, 
+        "count": 1,
+        "code": 0,
         "result": {
-            "lrc": "http://s.geci.me/lrc/386/38612/3861244.lrc", 
+            "lrc": "http://s.geci.me/lrc/386/38612/3861244.lrc",
             "sid": "3861244"
         }
     }
+
 
 根据专辑编号获取专辑封面URL
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -197,10 +199,10 @@ ________
 ::
 
     {
-        "count": 1, 
-        "code": 0, 
+        "count": 1,
+        "code": 0,
         "result": {
-            "cover": "http://s.geci.me/album-cover/157/1573814.jpg", 
+            "cover": "http://s.geci.me/album-cover/157/1573814.jpg",
             "thumb": "http://s.geci.me/album-cover/157/1573814-thumb.jpg"
         }
     }
