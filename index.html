@@ -1,0 +1,319 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>歌词迷API文档 &mdash;  歌词迷 geci.me API文档</title>
+    
+    <link rel="stylesheet" href="_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0a1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title=" 歌词迷 geci.me API文档" href="#" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="nav-item nav-item-0"><a href="#">歌词迷API文档</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="api">
+<h1>歌词迷API文档<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul class="simple">
+</ul>
+</div>
+<div class="section" id="id1">
+<h2>歌词<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id2">
+<h3>根据歌曲名获取歌词<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p class="first">请求地址</p>
+<p><code class="docutils literal"><span class="pre">http://gecimi.com/api/lyric/:song</span></code></p>
+</li>
+<li><p class="first">返回格式</p>
+<blockquote>
+<div><p>JSON</p>
+</div></blockquote>
+</li>
+<li><p class="first">请求方法</p>
+<blockquote>
+<div><p>GET</p>
+</div></blockquote>
+</li>
+<li><p class="first">示例</p>
+</li>
+</ul>
+<div class="highlight-python"><div class="highlight"><pre>curl &#39;http://gecimi.com/api/lyric/海阔天空&#39;
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span class="p">{</span>
+    <span class="s">&quot;count&quot;</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span>
+    <span class="s">&quot;code&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="s">&quot;result&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span> <span class="s">&quot;aid&quot;</span><span class="p">:</span> <span class="mi">2848529</span><span class="p">,</span> <span class="s">&quot;lrc&quot;</span><span class="p">:</span> <span class="s">&quot;http://s.gecimi.com/lrc/344/34435/3443588.lrc&quot;</span><span class="p">,</span> <span class="s">&quot;sid&quot;</span><span class="p">:</span> <span class="mi">3443588</span><span class="p">,</span> <span class="s">&quot;artist_id&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s">&quot;song&quot;</span><span class="p">:</span> <span class="s">&quot;</span><span class="se">\u6d77\u9614\u5929\u7a7a</span><span class="s">&quot;</span> <span class="p">},</span>
+        <span class="p">{</span> <span class="s">&quot;aid&quot;</span><span class="p">:</span> <span class="mi">2346662</span><span class="p">,</span> <span class="s">&quot;lrc&quot;</span><span class="p">:</span> <span class="s">&quot;http://s.gecimi.com/lrc/274/27442/2744281.lrc&quot;</span><span class="p">,</span> <span class="s">&quot;sid&quot;</span><span class="p">:</span> <span class="mi">2744281</span><span class="p">,</span> <span class="s">&quot;artist_id&quot;</span><span class="p">:</span> <span class="mi">2396</span><span class="p">,</span> <span class="s">&quot;song&quot;</span><span class="p">:</span> <span class="s">&quot;</span><span class="se">\u6d77\u9614\u5929\u7a7a</span><span class="s">&quot;</span> <span class="p">},</span>
+        <span class="p">{</span> <span class="s">&quot;aid&quot;</span><span class="p">:</span> <span class="mi">1889264</span><span class="p">,</span> <span class="s">&quot;lrc&quot;</span><span class="p">:</span> <span class="s">&quot;http://s.gecimi.com/lrc/210/21070/2107014.lrc&quot;</span><span class="p">,</span> <span class="s">&quot;sid&quot;</span><span class="p">:</span> <span class="mi">2107014</span><span class="p">,</span> <span class="s">&quot;artist_id&quot;</span><span class="p">:</span> <span class="mi">8715</span><span class="p">,</span> <span class="s">&quot;song&quot;</span><span class="p">:</span> <span class="s">&quot;</span><span class="se">\u6d77\u9614\u5929\u7a7a</span><span class="s">&quot;</span> <span class="p">},</span>
+        <span class="p">{</span> <span class="s">&quot;aid&quot;</span><span class="p">:</span> <span class="mi">2075717</span><span class="p">,</span> <span class="s">&quot;lrc&quot;</span><span class="p">:</span> <span class="s">&quot;http://s.gecimi.com/lrc/236/23651/2365157.lrc&quot;</span><span class="p">,</span> <span class="s">&quot;sid&quot;</span><span class="p">:</span> <span class="mi">2365157</span><span class="p">,</span> <span class="s">&quot;artist_id&quot;</span><span class="p">:</span> <span class="mi">8715</span><span class="p">,</span> <span class="s">&quot;song&quot;</span><span class="p">:</span> <span class="s">&quot;</span><span class="se">\u6d77\u9614\u5929\u7a7a</span><span class="s">&quot;</span> <span class="p">},</span>
+        <span class="p">{</span> <span class="s">&quot;aid&quot;</span><span class="p">:</span> <span class="mi">1563419</span><span class="p">,</span> <span class="s">&quot;lrc&quot;</span><span class="p">:</span> <span class="s">&quot;http://s.gecimi.com/lrc/166/16685/1668536.lrc&quot;</span><span class="p">,</span> <span class="s">&quot;sid&quot;</span><span class="p">:</span> <span class="mi">1668536</span><span class="p">,</span> <span class="s">&quot;artist_id&quot;</span><span class="p">:</span> <span class="mi">9208</span><span class="p">,</span> <span class="s">&quot;song&quot;</span><span class="p">:</span> <span class="s">&quot;</span><span class="se">\u6d77\u9614\u5929\u7a7a</span><span class="s">&quot;</span> <span class="p">},</span>
+        <span class="p">{</span> <span class="s">&quot;aid&quot;</span><span class="p">:</span> <span class="mi">1567586</span><span class="p">,</span> <span class="s">&quot;lrc&quot;</span><span class="p">:</span> <span class="s">&quot;http://s.gecimi.com/lrc/167/16739/1673997.lrc&quot;</span><span class="p">,</span> <span class="s">&quot;sid&quot;</span><span class="p">:</span> <span class="mi">1673997</span><span class="p">,</span> <span class="s">&quot;artist_id&quot;</span><span class="p">:</span> <span class="mi">9208</span><span class="p">,</span> <span class="s">&quot;song&quot;</span><span class="p">:</span> <span class="s">&quot;</span><span class="se">\u6d77\u9614\u5929\u7a7a</span><span class="s">&quot;</span> <span class="p">},</span>
+        <span class="p">{</span> <span class="s">&quot;aid&quot;</span><span class="p">:</span> <span class="mi">1571906</span><span class="p">,</span> <span class="s">&quot;lrc&quot;</span><span class="p">:</span> <span class="s">&quot;http://s.gecimi.com/lrc/167/16796/1679605.lrc&quot;</span><span class="p">,</span> <span class="s">&quot;sid&quot;</span><span class="p">:</span> <span class="mi">1679605</span><span class="p">,</span> <span class="s">&quot;artist_id&quot;</span><span class="p">:</span> <span class="mi">9208</span><span class="p">,</span> <span class="s">&quot;song&quot;</span><span class="p">:</span> <span class="s">&quot;</span><span class="se">\u6d77\u9614\u5929\u7a7a</span><span class="s">&quot;</span> <span class="p">},</span>
+        <span class="p">{</span> <span class="s">&quot;aid&quot;</span><span class="p">:</span> <span class="mi">1573814</span><span class="p">,</span> <span class="s">&quot;lrc&quot;</span><span class="p">:</span> <span class="s">&quot;http://s.gecimi.com/lrc/168/16819/1681961.lrc&quot;</span><span class="p">,</span> <span class="s">&quot;sid&quot;</span><span class="p">:</span> <span class="mi">1681961</span><span class="p">,</span> <span class="s">&quot;artist_id&quot;</span><span class="p">:</span> <span class="mi">9208</span><span class="p">,</span> <span class="s">&quot;song&quot;</span><span class="p">:</span> <span class="s">&quot;</span><span class="se">\u6d77\u9614\u5929\u7a7a</span><span class="s">&quot;</span> <span class="p">},</span>
+        <span class="p">{</span> <span class="s">&quot;aid&quot;</span><span class="p">:</span> <span class="mi">1656038</span><span class="p">,</span> <span class="s">&quot;lrc&quot;</span><span class="p">:</span> <span class="s">&quot;http://s.gecimi.com/lrc/179/17907/1790768.lrc&quot;</span><span class="p">,</span> <span class="s">&quot;sid&quot;</span><span class="p">:</span> <span class="mi">1790768</span><span class="p">,</span> <span class="s">&quot;artist_id&quot;</span><span class="p">:</span> <span class="mi">9208</span><span class="p">,</span> <span class="s">&quot;song&quot;</span><span class="p">:</span> <span class="s">&quot;</span><span class="se">\u6d77\u9614\u5929\u7a7a</span><span class="s">&quot;</span> <span class="p">},</span>
+        <span class="p">{</span> <span class="s">&quot;aid&quot;</span><span class="p">:</span> <span class="mi">1718741</span><span class="p">,</span> <span class="s">&quot;lrc&quot;</span><span class="p">:</span> <span class="s">&quot;http://s.gecimi.com/lrc/187/18757/1875769.lrc&quot;</span><span class="p">,</span> <span class="s">&quot;sid&quot;</span><span class="p">:</span> <span class="mi">1875769</span><span class="p">,</span> <span class="s">&quot;artist_id&quot;</span><span class="p">:</span> <span class="mi">9208</span><span class="p">,</span> <span class="s">&quot;song&quot;</span><span class="p">:</span> <span class="s">&quot;</span><span class="se">\u6d77\u9614\u5929\u7a7a</span><span class="s">&quot;</span> <span class="p">},</span>
+        <span class="p">{</span> <span class="s">&quot;aid&quot;</span><span class="p">:</span> <span class="mi">2003267</span><span class="p">,</span> <span class="s">&quot;lrc&quot;</span><span class="p">:</span> <span class="s">&quot;http://s.gecimi.com/lrc/226/22642/2264296.lrc&quot;</span><span class="p">,</span> <span class="s">&quot;sid&quot;</span><span class="p">:</span> <span class="mi">2264296</span><span class="p">,</span> <span class="s">&quot;artist_id&quot;</span><span class="p">:</span> <span class="mi">9208</span><span class="p">,</span> <span class="s">&quot;song&quot;</span><span class="p">:</span> <span class="s">&quot;</span><span class="se">\u6d77\u9614\u5929\u7a7a</span><span class="s">&quot;</span> <span class="p">},</span>
+        <span class="p">{</span> <span class="s">&quot;aid&quot;</span><span class="p">:</span> <span class="mi">2020610</span><span class="p">,</span> <span class="s">&quot;lrc&quot;</span><span class="p">:</span> <span class="s">&quot;http://s.gecimi.com/lrc/228/22889/2288967.lrc&quot;</span><span class="p">,</span> <span class="s">&quot;sid&quot;</span><span class="p">:</span> <span class="mi">2288967</span><span class="p">,</span> <span class="s">&quot;artist_id&quot;</span><span class="p">:</span> <span class="mi">9208</span><span class="p">,</span> <span class="s">&quot;song&quot;</span><span class="p">:</span> <span class="s">&quot;</span><span class="se">\u6d77\u9614\u5929\u7a7a</span><span class="s">&quot;</span> <span class="p">},</span>
+        <span class="p">{</span> <span class="s">&quot;aid&quot;</span><span class="p">:</span> <span class="mi">2051678</span><span class="p">,</span> <span class="s">&quot;lrc&quot;</span><span class="p">:</span> <span class="s">&quot;http://s.gecimi.com/lrc/233/23323/2332322.lrc&quot;</span><span class="p">,</span> <span class="s">&quot;sid&quot;</span><span class="p">:</span> <span class="mi">2332322</span><span class="p">,</span> <span class="s">&quot;artist_id&quot;</span><span class="p">:</span> <span class="mi">9208</span><span class="p">,</span> <span class="s">&quot;song&quot;</span><span class="p">:</span> <span class="s">&quot;</span><span class="se">\u6d77\u9614\u5929\u7a7a</span><span class="s">&quot;</span> <span class="p">},</span>
+        <span class="p">{</span> <span class="s">&quot;aid&quot;</span><span class="p">:</span> <span class="mi">2412704</span><span class="p">,</span> <span class="s">&quot;lrc&quot;</span><span class="p">:</span> <span class="s">&quot;http://s.gecimi.com/lrc/283/28376/2837689.lrc&quot;</span><span class="p">,</span> <span class="s">&quot;sid&quot;</span><span class="p">:</span> <span class="mi">2837689</span><span class="p">,</span> <span class="s">&quot;artist_id&quot;</span><span class="p">:</span> <span class="mi">9208</span><span class="p">,</span> <span class="s">&quot;song&quot;</span><span class="p">:</span> <span class="s">&quot;</span><span class="se">\u6d77\u9614\u5929\u7a7a</span><span class="s">&quot;</span> <span class="p">},</span>
+        <span class="p">{</span> <span class="s">&quot;aid&quot;</span><span class="p">:</span> <span class="mi">2607041</span><span class="p">,</span> <span class="s">&quot;lrc&quot;</span><span class="p">:</span> <span class="s">&quot;http://s.gecimi.com/lrc/311/31116/3111659.lrc&quot;</span><span class="p">,</span> <span class="s">&quot;sid&quot;</span><span class="p">:</span> <span class="mi">3111659</span><span class="p">,</span> <span class="s">&quot;artist_id&quot;</span><span class="p">:</span> <span class="mi">9208</span><span class="p">,</span> <span class="s">&quot;song&quot;</span><span class="p">:</span> <span class="s">&quot;</span><span class="se">\u6d77\u9614\u5929\u7a7a</span><span class="s">&quot;</span> <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h3>根据歌曲名和歌手名获取歌词<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p class="first">请求地址</p>
+<p><code class="docutils literal"><span class="pre">http://gecimi.com/api/lyric/:song/:artist</span></code></p>
+</li>
+<li><p class="first">返回格式</p>
+<blockquote>
+<div><p>JSON</p>
+</div></blockquote>
+</li>
+<li><p class="first">请求方法</p>
+<blockquote>
+<div><p>GET</p>
+</div></blockquote>
+</li>
+<li><p class="first">示例</p>
+</li>
+</ul>
+<div class="highlight-python"><div class="highlight"><pre>curl &#39;http://gecimi.com/api/lyric/海阔天空/Beyond&#39;
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span class="p">{</span>
+    <span class="s">&quot;count&quot;</span><span class="p">:</span> <span class="mi">16</span><span class="p">,</span>
+    <span class="s">&quot;code&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="s">&quot;result&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span> <span class="s">&quot;aid&quot;</span><span class="p">:</span> <span class="mi">1563419</span><span class="p">,</span> <span class="s">&quot;artist_id&quot;</span><span class="p">:</span> <span class="mi">9208</span><span class="p">,</span> <span class="s">&quot;sid&quot;</span><span class="p">:</span> <span class="mi">1668536</span><span class="p">,</span> <span class="s">&quot;lrc&quot;</span><span class="p">:</span> <span class="s">&quot;http://s.gecimi.com/lrc/166/16685/1668536.lrc&quot;</span><span class="p">,</span> <span class="s">&quot;song&quot;</span><span class="p">:</span> <span class="s">&quot;</span><span class="se">\u6d77\u9614\u5929\u7a7a</span><span class="s">&quot;</span> <span class="p">},</span>
+        <span class="p">{</span> <span class="s">&quot;aid&quot;</span><span class="p">:</span> <span class="mi">1567586</span><span class="p">,</span> <span class="s">&quot;artist_id&quot;</span><span class="p">:</span> <span class="mi">9208</span><span class="p">,</span> <span class="s">&quot;sid&quot;</span><span class="p">:</span> <span class="mi">1673997</span><span class="p">,</span> <span class="s">&quot;lrc&quot;</span><span class="p">:</span> <span class="s">&quot;http://s.gecimi.com/lrc/167/16739/1673997.lrc&quot;</span><span class="p">,</span> <span class="s">&quot;song&quot;</span><span class="p">:</span> <span class="s">&quot;</span><span class="se">\u6d77\u9614\u5929\u7a7a</span><span class="s">&quot;</span> <span class="p">},</span>
+        <span class="p">{</span> <span class="s">&quot;aid&quot;</span><span class="p">:</span> <span class="mi">1567586</span><span class="p">,</span> <span class="s">&quot;artist_id&quot;</span><span class="p">:</span> <span class="mi">9208</span><span class="p">,</span> <span class="s">&quot;sid&quot;</span><span class="p">:</span> <span class="mi">1673998</span><span class="p">,</span> <span class="s">&quot;lrc&quot;</span><span class="p">:</span> <span class="s">&quot;http://s.gecimi.com/lrc/167/16739/1673998.lrc&quot;</span><span class="p">,</span> <span class="s">&quot;song&quot;</span><span class="p">:</span> <span class="s">&quot;</span><span class="se">\u6d77\u9614\u5929\u7a7a</span><span class="s">&quot;</span> <span class="p">},</span>
+        <span class="p">{</span> <span class="s">&quot;aid&quot;</span><span class="p">:</span> <span class="mi">1571906</span><span class="p">,</span> <span class="s">&quot;artist_id&quot;</span><span class="p">:</span> <span class="mi">9208</span><span class="p">,</span> <span class="s">&quot;sid&quot;</span><span class="p">:</span> <span class="mi">1679605</span><span class="p">,</span> <span class="s">&quot;lrc&quot;</span><span class="p">:</span> <span class="s">&quot;http://s.gecimi.com/lrc/167/16796/1679605.lrc&quot;</span><span class="p">,</span> <span class="s">&quot;song&quot;</span><span class="p">:</span> <span class="s">&quot;</span><span class="se">\u6d77\u9614\u5929\u7a7a</span><span class="s">&quot;</span> <span class="p">},</span>
+        <span class="p">{</span> <span class="s">&quot;aid&quot;</span><span class="p">:</span> <span class="mi">1573814</span><span class="p">,</span> <span class="s">&quot;artist_id&quot;</span><span class="p">:</span> <span class="mi">9208</span><span class="p">,</span> <span class="s">&quot;sid&quot;</span><span class="p">:</span> <span class="mi">1681961</span><span class="p">,</span> <span class="s">&quot;lrc&quot;</span><span class="p">:</span> <span class="s">&quot;http://s.gecimi.com/lrc/168/16819/1681961.lrc&quot;</span><span class="p">,</span> <span class="s">&quot;song&quot;</span><span class="p">:</span> <span class="s">&quot;</span><span class="se">\u6d77\u9614\u5929\u7a7a</span><span class="s">&quot;</span> <span class="p">},</span>
+        <span class="p">{</span> <span class="s">&quot;aid&quot;</span><span class="p">:</span> <span class="mi">1656038</span><span class="p">,</span> <span class="s">&quot;artist_id&quot;</span><span class="p">:</span> <span class="mi">9208</span><span class="p">,</span> <span class="s">&quot;sid&quot;</span><span class="p">:</span> <span class="mi">1790768</span><span class="p">,</span> <span class="s">&quot;lrc&quot;</span><span class="p">:</span> <span class="s">&quot;http://s.gecimi.com/lrc/179/17907/1790768.lrc&quot;</span><span class="p">,</span> <span class="s">&quot;song&quot;</span><span class="p">:</span> <span class="s">&quot;</span><span class="se">\u6d77\u9614\u5929\u7a7a</span><span class="s">&quot;</span> <span class="p">},</span>
+        <span class="p">{</span> <span class="s">&quot;aid&quot;</span><span class="p">:</span> <span class="mi">1718741</span><span class="p">,</span> <span class="s">&quot;artist_id&quot;</span><span class="p">:</span> <span class="mi">9208</span><span class="p">,</span> <span class="s">&quot;sid&quot;</span><span class="p">:</span> <span class="mi">1875769</span><span class="p">,</span> <span class="s">&quot;lrc&quot;</span><span class="p">:</span> <span class="s">&quot;http://s.gecimi.com/lrc/187/18757/1875769.lrc&quot;</span><span class="p">,</span> <span class="s">&quot;song&quot;</span><span class="p">:</span> <span class="s">&quot;</span><span class="se">\u6d77\u9614\u5929\u7a7a</span><span class="s">&quot;</span> <span class="p">},</span>
+        <span class="p">{</span> <span class="s">&quot;aid&quot;</span><span class="p">:</span> <span class="mi">2003267</span><span class="p">,</span> <span class="s">&quot;artist_id&quot;</span><span class="p">:</span> <span class="mi">9208</span><span class="p">,</span> <span class="s">&quot;sid&quot;</span><span class="p">:</span> <span class="mi">2264296</span><span class="p">,</span> <span class="s">&quot;lrc&quot;</span><span class="p">:</span> <span class="s">&quot;http://s.gecimi.com/lrc/226/22642/2264296.lrc&quot;</span><span class="p">,</span> <span class="s">&quot;song&quot;</span><span class="p">:</span> <span class="s">&quot;</span><span class="se">\u6d77\u9614\u5929\u7a7a</span><span class="s">&quot;</span> <span class="p">},</span>
+        <span class="p">{</span> <span class="s">&quot;aid&quot;</span><span class="p">:</span> <span class="mi">2020610</span><span class="p">,</span> <span class="s">&quot;artist_id&quot;</span><span class="p">:</span> <span class="mi">9208</span><span class="p">,</span> <span class="s">&quot;sid&quot;</span><span class="p">:</span> <span class="mi">2288967</span><span class="p">,</span> <span class="s">&quot;lrc&quot;</span><span class="p">:</span> <span class="s">&quot;http://s.gecimi.com/lrc/228/22889/2288967.lrc&quot;</span><span class="p">,</span> <span class="s">&quot;song&quot;</span><span class="p">:</span> <span class="s">&quot;</span><span class="se">\u6d77\u9614\u5929\u7a7a</span><span class="s">&quot;</span> <span class="p">},</span>
+        <span class="p">{</span> <span class="s">&quot;aid&quot;</span><span class="p">:</span> <span class="mi">2051678</span><span class="p">,</span> <span class="s">&quot;artist_id&quot;</span><span class="p">:</span> <span class="mi">9208</span><span class="p">,</span> <span class="s">&quot;sid&quot;</span><span class="p">:</span> <span class="mi">2332322</span><span class="p">,</span> <span class="s">&quot;lrc&quot;</span><span class="p">:</span> <span class="s">&quot;http://s.gecimi.com/lrc/233/23323/2332322.lrc&quot;</span><span class="p">,</span> <span class="s">&quot;song&quot;</span><span class="p">:</span> <span class="s">&quot;</span><span class="se">\u6d77\u9614\u5929\u7a7a</span><span class="s">&quot;</span> <span class="p">},</span>
+        <span class="p">{</span> <span class="s">&quot;aid&quot;</span><span class="p">:</span> <span class="mi">2412704</span><span class="p">,</span> <span class="s">&quot;artist_id&quot;</span><span class="p">:</span> <span class="mi">9208</span><span class="p">,</span> <span class="s">&quot;sid&quot;</span><span class="p">:</span> <span class="mi">2837689</span><span class="p">,</span> <span class="s">&quot;lrc&quot;</span><span class="p">:</span> <span class="s">&quot;http://s.gecimi.com/lrc/283/28376/2837689.lrc&quot;</span><span class="p">,</span> <span class="s">&quot;song&quot;</span><span class="p">:</span> <span class="s">&quot;</span><span class="se">\u6d77\u9614\u5929\u7a7a</span><span class="s">&quot;</span> <span class="p">},</span>
+        <span class="p">{</span> <span class="s">&quot;aid&quot;</span><span class="p">:</span> <span class="mi">2607041</span><span class="p">,</span> <span class="s">&quot;artist_id&quot;</span><span class="p">:</span> <span class="mi">9208</span><span class="p">,</span> <span class="s">&quot;sid&quot;</span><span class="p">:</span> <span class="mi">3111659</span><span class="p">,</span> <span class="s">&quot;lrc&quot;</span><span class="p">:</span> <span class="s">&quot;http://s.gecimi.com/lrc/311/31116/3111659.lrc&quot;</span><span class="p">,</span> <span class="s">&quot;song&quot;</span><span class="p">:</span> <span class="s">&quot;</span><span class="se">\u6d77\u9614\u5929\u7a7a</span><span class="s">&quot;</span> <span class="p">},</span>
+        <span class="p">{</span> <span class="s">&quot;aid&quot;</span><span class="p">:</span> <span class="mi">2647055</span><span class="p">,</span> <span class="s">&quot;artist_id&quot;</span><span class="p">:</span> <span class="mi">9208</span><span class="p">,</span> <span class="s">&quot;sid&quot;</span><span class="p">:</span> <span class="mi">3166350</span><span class="p">,</span> <span class="s">&quot;lrc&quot;</span><span class="p">:</span> <span class="s">&quot;http://s.gecimi.com/lrc/316/31663/3166350.lrc&quot;</span><span class="p">,</span> <span class="s">&quot;song&quot;</span><span class="p">:</span> <span class="s">&quot;</span><span class="se">\u6d77\u9614\u5929\u7a7a</span><span class="s">&quot;</span> <span class="p">},</span>
+        <span class="p">{</span> <span class="s">&quot;aid&quot;</span><span class="p">:</span> <span class="mi">2657468</span><span class="p">,</span> <span class="s">&quot;artist_id&quot;</span><span class="p">:</span> <span class="mi">9208</span><span class="p">,</span> <span class="s">&quot;sid&quot;</span><span class="p">:</span> <span class="mi">3180339</span><span class="p">,</span> <span class="s">&quot;lrc&quot;</span><span class="p">:</span> <span class="s">&quot;http://s.gecimi.com/lrc/318/31803/3180339.lrc&quot;</span><span class="p">,</span> <span class="s">&quot;song&quot;</span><span class="p">:</span> <span class="s">&quot;</span><span class="se">\u6d77\u9614\u5929\u7a7a</span><span class="s">&quot;</span> <span class="p">},</span>
+        <span class="p">{</span> <span class="s">&quot;aid&quot;</span><span class="p">:</span> <span class="mi">3093833</span><span class="p">,</span> <span class="s">&quot;artist_id&quot;</span><span class="p">:</span> <span class="mi">9208</span><span class="p">,</span> <span class="s">&quot;sid&quot;</span><span class="p">:</span> <span class="mi">3774083</span><span class="p">,</span> <span class="s">&quot;lrc&quot;</span><span class="p">:</span> <span class="s">&quot;http://s.gecimi.com/lrc/377/37740/3774083.lrc&quot;</span><span class="p">,</span> <span class="s">&quot;song&quot;</span><span class="p">:</span> <span class="s">&quot;</span><span class="se">\u6d77\u9614\u5929\u7a7a</span><span class="s">&quot;</span> <span class="p">},</span>
+        <span class="p">{</span> <span class="s">&quot;aid&quot;</span><span class="p">:</span> <span class="mi">3161846</span><span class="p">,</span> <span class="s">&quot;artist_id&quot;</span><span class="p">:</span> <span class="mi">9208</span><span class="p">,</span> <span class="s">&quot;sid&quot;</span><span class="p">:</span> <span class="mi">3861244</span><span class="p">,</span> <span class="s">&quot;lrc&quot;</span><span class="p">:</span> <span class="s">&quot;http://s.gecimi.com/lrc/386/38612/3861244.lrc&quot;</span><span class="p">,</span> <span class="s">&quot;song&quot;</span><span class="p">:</span> <span class="s">&quot;</span><span class="se">\u6d77\u9614\u5929\u7a7a</span><span class="s">&quot;</span> <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id4">
+<h3>根据歌手编号获取歌手信息(暂时只有歌手名)<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p class="first">请求地址</p>
+<p><code class="docutils literal"><span class="pre">http://gecimi.com/api/artist/:artist_id</span></code></p>
+</li>
+<li><p class="first">返回格式</p>
+<blockquote>
+<div><p>JSON</p>
+</div></blockquote>
+</li>
+<li><p class="first">请求方法</p>
+<blockquote>
+<div><p>GET</p>
+</div></blockquote>
+</li>
+<li><p class="first">示例</p>
+</li>
+</ul>
+<div class="highlight-python"><div class="highlight"><pre>curl &#39;http://gecimi.com/api/artist/9208&#39;
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span class="p">{</span>
+    <span class="s">&quot;count&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="s">&quot;code&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="s">&quot;result&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s">&quot;profile&quot;</span><span class="p">:</span> <span class="s">&quot; &quot;</span><span class="p">,</span>
+        <span class="s">&quot;name&quot;</span><span class="p">:</span> <span class="s">&quot;Beyond&quot;</span><span class="p">,</span>
+        <span class="s">&quot;area&quot;</span><span class="p">:</span> <span class="s">&quot;&quot;</span><span class="p">,</span>
+        <span class="s">&quot;alias&quot;</span><span class="p">:</span> <span class="s">&quot; &quot;</span><span class="p">,</span>
+        <span class="s">&quot;birthday&quot;</span><span class="p">:</span> <span class="s">&quot;&quot;</span><span class="p">,</span>
+        <span class="s">&quot;constellation&quot;</span><span class="p">:</span> <span class="s">&quot;&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="url">
+<h3>根据歌曲编号获取歌词URL<a class="headerlink" href="#url" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p class="first">请求地址</p>
+<p><code class="docutils literal"><span class="pre">http://gecimi.com/api/lrc/:song_id</span></code></p>
+</li>
+<li><p class="first">返回格式</p>
+<blockquote>
+<div><p>JSON</p>
+</div></blockquote>
+</li>
+<li><p class="first">请求方法</p>
+<blockquote>
+<div><p>GET</p>
+</div></blockquote>
+</li>
+<li><p class="first">示例</p>
+</li>
+</ul>
+<div class="highlight-python"><div class="highlight"><pre>curl &#39;http://gecimi.com/api/lrc/3861244&#39;
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span class="p">{</span>
+    <span class="s">&quot;count&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="s">&quot;code&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="s">&quot;result&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s">&quot;lrc&quot;</span><span class="p">:</span> <span class="s">&quot;http://s.gecimi.com/lrc/386/38612/3861244.lrc&quot;</span><span class="p">,</span>
+        <span class="s">&quot;sid&quot;</span><span class="p">:</span> <span class="s">&quot;3861244&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id5">
+<h3>根据专辑编号获取专辑封面URL<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p class="first">请求地址</p>
+<p><code class="docutils literal"><span class="pre">http://gecimi.com/api/cover/:album_id</span></code></p>
+</li>
+<li><p class="first">返回格式</p>
+<blockquote>
+<div><p>JSON</p>
+</div></blockquote>
+</li>
+<li><p class="first">请求方法</p>
+<blockquote>
+<div><p>GET</p>
+</div></blockquote>
+</li>
+<li><p class="first">示例</p>
+</li>
+</ul>
+<div class="highlight-python"><div class="highlight"><pre>curl &#39;http://gecimi.com/api/cover/1573814&#39;
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span class="p">{</span>
+    <span class="s">&quot;count&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="s">&quot;code&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="s">&quot;result&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s">&quot;cover&quot;</span><span class="p">:</span> <span class="s">&quot;http://s.gecimi.com/album-cover/157/1573814.jpg&quot;</span><span class="p">,</span>
+        <span class="s">&quot;thumb&quot;</span><span class="p">:</span> <span class="s">&quot;http://s.gecimi.com/album-cover/157/1573814-thumb.jpg&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><a class="reference internal" href="genindex.html"><span>Index</span></a></li>
+<li><a class="reference internal" href="py-modindex.html"><span>Module Index</span></a></li>
+<li><a class="reference internal" href="search.html"><span>Search Page</span></a></li>
+</ul>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="#">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">歌词迷API文档</a><ul>
+<li><a class="reference internal" href="#id1">歌词</a><ul>
+<li><a class="reference internal" href="#id2">根据歌曲名获取歌词</a></li>
+<li><a class="reference internal" href="#id3">根据歌曲名和歌手名获取歌词</a></li>
+<li><a class="reference internal" href="#id4">根据歌手编号获取歌手信息(暂时只有歌手名)</a></li>
+<li><a class="reference internal" href="#url">根据歌曲编号获取歌词URL</a></li>
+<li><a class="reference internal" href="#id5">根据专辑编号获取专辑封面URL</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
+</ul>
+
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/index.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="nav-item nav-item-0"><a href="#">歌词迷API文档</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2012, solos.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    </div>
+  </body>
+</html>
